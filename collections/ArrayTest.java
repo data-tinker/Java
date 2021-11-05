@@ -12,6 +12,13 @@ public class ArrayTest {
         System.out.println(Arrays.toString(brr));
     }
 
+    private static void setArray() {
+        int[] arr = {1, 2};
+        arr[0] = 3;
+        System.out.println(Arrays.toString(arr));
+
+    }
+
     private static void twoDimensionalArray() {
         char[][] arr = {
             {'a', 'b'},
@@ -48,10 +55,22 @@ public class ArrayTest {
 
     }
 
+    private static void arraysEqual() {
+        int[] arr = {1, 2, 3};
+        int[] brr = {1, 2, 3};
+        int[] crr = {3, 2, 1};
+
+        System.out.println(arr == brr);
+        System.out.println(Arrays.equals(arr, brr));
+        System.out.println(Arrays.equals(crr, brr));
+    }
+
     public static void main(String[] args) {
         createArray();
+        setArray();
         twoDimensionalArray();
         arrayWithObjects();
         sortArray();
+        arraysEqual();
     }
 }
