@@ -3,8 +3,8 @@ import java.util.*;
 class PriorityQueueTest {
     private static void createHeap() {
         PriorityQueue<Integer> minHeap = new PriorityQueue<Integer>();
-        minHeap.offer(1);
-        minHeap.offer(2);
+        minHeap.add(1);
+        minHeap.add(2);
         System.out.println(minHeap.peek());
         PriorityQueue<Integer> maxHeap = new PriorityQueue<>(Comparator.reverseOrder());
         maxHeap.offer(1);
