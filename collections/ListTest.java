@@ -87,6 +87,31 @@ class ListTest {
         System.out.println(li1.equals(li3));
     }
 
+    private static void iterateList() {
+        List<Integer> li = List.of(1, 2, 3);
+
+        for (int i = 0; i < li.size(); ++i) {
+            System.out.print(li.get(i) + " ");
+        }
+        System.out.println();
+
+        for (int x : li) {
+            System.out.print(x + " ");
+        }
+        System.out.println();
+
+        Iterator<Integer> liIt = li.iterator();
+        while (liIt.hasNext()) {
+            System.out.print(liIt.next() + " ");
+        }
+        System.out.println();
+
+        li.forEach((x) -> {
+            System.out.print(x + " ");
+        });
+        System.out.println();
+    }
+
     public static void main(String[] args) {
         createList();
         getList();
@@ -95,5 +120,6 @@ class ListTest {
         twoDimensionalList();
         sortList();
         listsEqual();
+        iterateList();
     }
 }

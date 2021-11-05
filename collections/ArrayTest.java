@@ -65,6 +65,20 @@ public class ArrayTest {
         System.out.println(Arrays.equals(crr, brr));
     }
 
+    private static void iterateArray() {
+        int[] arr = {1, 2, 3};
+
+        for (int i = 0; i < arr.length; ++i) {
+            System.out.print(arr[i] + " ");
+        }
+        System.out.println();
+
+        for (int x : arr) {
+             System.out.print(x + " ");
+        }
+        System.out.println();
+    }
+
     public static void main(String[] args) {
         createArray();
         setArray();
@@ -72,5 +86,6 @@ public class ArrayTest {
         arrayWithObjects();
         sortArray();
         arraysEqual();
+        iterateArray();
     }
 }
